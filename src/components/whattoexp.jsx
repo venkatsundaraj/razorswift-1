@@ -14,18 +14,19 @@ const Whattoexp = ({ contchangeone }) => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", lg: "row" },
           alignItems: "center",
           mt: "5%",
         }}
       >
         <Box
           sx={{
-            width: "50%",
-            borderRight: "1px solid",
+            width: { xs: "100%", lg: "50%" },
+            borderRight: { xs: "none", lg: "1px solid" },
             pt: "3%",
             pb: "3%",
             borderColor: "primary.mainone",
+            textAlign: "center",
           }}
         >
           <Typography sx={{ fontFamily: "urbanist", fontSize: "28px" }}>
@@ -35,7 +36,8 @@ const Whattoexp = ({ contchangeone }) => {
         <Box
           sx={{
             display: "flex",
-            flexWrap: "wrap",
+            flexDirection: { xs: "column", lg: "row" },
+            flexWrap: { xs: "nowrap", lg: "wrap" },
             justifyContent: "end",
           }}
         >
@@ -46,7 +48,7 @@ const Whattoexp = ({ contchangeone }) => {
                 flexDirection: "row",
                 borderRadius: "20px",
                 backgroundColor: "common.white",
-                width: "45%",
+                width: { xs: "100%", lg: "45%" },
                 p: "15px",
                 alignItems: "center",
                 ml: "1%",

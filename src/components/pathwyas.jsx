@@ -45,10 +45,6 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-const fonthead = {
-  fontSize: "clamp(45px, 3.5vw, 64px)",
-};
-
 const fonttitle = {
   fontSize: "clamp(25px, 2vw, 36px)",
   fontFamily: "Urbanist",
@@ -97,16 +93,26 @@ export default function pathways() {
   };
 
   return (
-    <Box sx={{ backgroundColor: "primary.main", padding: "0 50px 20px" }}>
+    <Box
+      sx={{
+        backgroundColor: "primary.main",
+        padding: { xs: "15px", lg: "0 50px 20px" },
+      }}
+    >
       <Typography
-        style={fonthead}
-        sx={{ color: "common.white", fontFamily: "Bebas Neue" }}
+        sx={{
+          color: "common.white",
+          fontFamily: "Bebas Neue",
+          fontSize: { xs: "35px", lg: "clamp(45px, 3.5vw, 64px)" },
+          textAlign: { xs: "center", lg: "left" },
+        }}
       >
         RAZORSWIFT PATHWAYS
       </Typography>
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", lg: "row" },
           justifyContent: "space-around",
         }}
       >
@@ -147,6 +153,7 @@ export default function pathways() {
                       : index === data.length - 1
                       ? "0px 0px 40px 40px"
                       : "0",
+                  width: { xs: "325px", lg: "100%" },
                 }}
                 expanded={expanded === `panel${index}`} // Use index to identify each accordion
                 onChange={handleChange(`panel${index}`)} // Use index to identify each accordion
@@ -220,6 +227,7 @@ export default function pathways() {
                       : index === datatwo.length - 1
                       ? "0px 0px 40px 40px"
                       : "0",
+                  width: { xs: "325px", lg: "100%" },
                 }}
                 expanded={expandedone === `panelone${index}`} // Use index to identify each accordion
                 onChange={handleChangeone(`panelone${index}`)} // Use index to identify each accordion

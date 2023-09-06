@@ -21,12 +21,13 @@ const whysec = () => {
     <Box
       sx={{
         display: "flex",
-
+        flexDirection: { xs: "column", lg: "row" },
         alignItems: "center",
         height: "100vh",
         pl: "15px",
         pr: "15px",
-        justifyContent: "space-around",
+        justifyContent: { xs: "flex-start", lg: "space-around" },
+        alignItems: { xs: "flex-start", lg: "center" },
       }}
     >
       <Box
@@ -39,13 +40,13 @@ const whysec = () => {
         }}
       >
         <Typography
-          style={headfont}
           sx={{
             color: "primary.purp",
-
+            fontSize: { xs: "30px", lg: "clamp(50px, 4vw, 64px)" },
             fontFamily: "Bebas Neue",
             textAlign: "center",
             mb: "2%",
+            width: { xs: "300px", lg: "100%" },
           }}
         >
           {data[0].title}
@@ -58,6 +59,7 @@ const whysec = () => {
             mb: "3%",
             fontFamily: "urbanist",
             textAlign: "justify",
+            width: { xs: "300px", lg: "100%" },
           }}
         >
           {data[0].description}
@@ -69,6 +71,7 @@ const whysec = () => {
             textAlign: "justify",
             mb: "4%",
             fontFamily: "urbanist",
+            width: { xs: "300px", lg: "100%" },
           }}
         >
           {data[0].descriptiontwo}
@@ -95,7 +98,7 @@ const whysec = () => {
         sx={{
           display: "flex",
           flexDirection: "row",
-          width: "45vw",
+          width: { xs: "100%", lg: "45vw" },
         }}
       >
         <Box
@@ -153,8 +156,8 @@ const whysec = () => {
             height: "clamp(250px, 19.3vw, 270px)",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "flex-end",
-            marginLeft: "30px",
+            justifyContent: { xs: "flex-start", lg: "flex-end" },
+            marginLeft: { xs: "15px", lg: "30px" },
           }}
         >
           <Box
