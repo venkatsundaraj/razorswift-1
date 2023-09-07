@@ -54,6 +54,21 @@ const footer = () => {
         <Typography
           sx={{
             color: "common.white",
+            fontSize: "64px",
+            fontFamily: "urbanist",
+            fontWeight: "600",
+            textAlign: "center",
+            lineHeight: "1.2",
+            mb: 5,
+            fontSize: { xs: "25px", lg: "clamp(40px,3.1vw,64px)" },
+          }}
+        >
+          New Age Marketplace for
+          <br /> Talent Acquisition
+        </Typography>
+        <Typography
+          sx={{
+            color: "common.white",
 
             fontFamily: "urbanist",
             mb: 5,
