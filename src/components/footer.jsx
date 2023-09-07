@@ -9,9 +9,6 @@ import fb from "../../public/images/facebook-logo.svg";
 import linkedin from "../../public/images/linkedin-logo.svg";
 import insta from "../../public/images/instagram-logo.svg";
 const footer = () => {
-  const fonts = {
-    fontSize: "clamp(40px,3.1vw,64px)",
-  };
   const fontstyle = {
     color: "white",
     fontSize: "24px",
@@ -28,8 +25,8 @@ const footer = () => {
         alignItems: "center",
         pt: 10,
         pb: 5,
-        pl: "15%",
-        pr: "15%",
+        pl: { xs: "15px", lg: "15%" },
+        pr: { xs: "15px", lg: "15%" },
       }}
     >
       <Box
@@ -40,7 +37,6 @@ const footer = () => {
         }}
       >
         <Typography
-          style={fonts}
           sx={{
             color: "common.white",
             fontSize: "64px",
@@ -49,6 +45,7 @@ const footer = () => {
             textAlign: "center",
             lineHeight: "1.2",
             mb: 5,
+            fontSize: { xs: "25px", lg: "clamp(40px,3.1vw,64px)" },
           }}
         >
           New Age Marketplace for
@@ -57,9 +54,10 @@ const footer = () => {
         <Typography
           sx={{
             color: "common.white",
-            fontSize: "28px",
+
             fontFamily: "urbanist",
             mb: 5,
+            fontSize: { xs: "17px", lg: "28px" },
           }}
         >
           Grow your expertise and business with us!

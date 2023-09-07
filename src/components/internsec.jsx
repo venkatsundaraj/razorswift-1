@@ -31,8 +31,8 @@ const internsec = ({ contchange }) => {
         }`,
         pt: "5%",
         pb: "5%",
-        pl: "60px",
-        pr: "60px",
+        pl: { xs: "15px", lg: "64px" },
+        pr: { xs: "15px", lg: "64px" },
       }}
     >
       <Box
@@ -42,28 +42,41 @@ const internsec = ({ contchange }) => {
           justifyContent: "space-between",
         }}
       >
-        <Box sx={{ width: "50%" }}>
-          <Image src={aspiratvect} />
-          <Typography
+        <Box sx={{ width: { xs: "100%", lg: "50%" } }}>
+          <Box
             sx={{
-              fontSize: "clamp(45px,3.5vw,55px)",
-              fontFamily: "urbanist",
-              fontWeight: "500",
+              display: { xs: "flex" },
+              flexDirection: { xs: "row-reverse", lg: "column" },
+              width: { xs: "100vw", lg: "900px" },
+              alignItems: { xs: "center", lg: "flex-start" },
             }}
           >
-            {contchange.firstsec.toptitleone}
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: "clamp(65px,5vw,77px)",
-              lineHeight: "1.0",
-              fontFamily: "urbanist",
-              fontWeight: "600",
-              mb: "3%",
-            }}
-          >
-            {contchange.firstsec.toptitletwo}
-          </Typography>
+            <Box sx={{ width: { xs: "60vw" } }}>
+              <Image src={aspiratvect} />
+            </Box>
+            <Box sx={{ width: { xs: "40vw" } }}>
+              <Typography
+                sx={{
+                  fontSize: { xs: "25px", lg: "clamp(45px,3.5vw,55px)" },
+                  fontFamily: "urbanist",
+                  fontWeight: "500",
+                }}
+              >
+                {contchange.firstsec.toptitleone}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "30px", lg: "clamp(65px,5vw,77px)" },
+                  lineHeight: "1.0",
+                  fontFamily: "urbanist",
+                  fontWeight: "600",
+                  mb: "3%",
+                }}
+              >
+                {contchange.firstsec.toptitletwo}
+              </Typography>
+            </Box>
+          </Box>
           <Typography
             sx={{ fontSize: "22px", fontFamily: "urbanist", mb: "5%" }}
           >
@@ -94,7 +107,7 @@ const internsec = ({ contchange }) => {
           </Box>
         </Box>
 
-        <Box>
+        <Box sx={{ display: { xs: "none", lg: "block" } }}>
           <Image style={imgs} src={internmain} />
         </Box>
       </Box>
