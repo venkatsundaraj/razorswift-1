@@ -5,14 +5,14 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Internsec from "../components/internsec";
+import DropdownBody from "./DropdownBody.jsx";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import data from "../utilities/intern.js";
-import dropdata from "../utilities/dropdown.js";
+import dropDownBodyData from "@/constants/Homepage/dropDownBodyData.js";
+import dropDownData from "@/constants/Homepage/dropDownData.js";
 import "../styles/dropdown.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import arrow from "../../public/images/dropdown-arrow.svg";
@@ -23,7 +23,7 @@ function a11yProps(index) {
   };
 }
 
-export default function Test() {
+export default function DropdownSection() {
   const [age, setAge] = React.useState("1");
 
   const handleChange = (event) => {
@@ -32,8 +32,10 @@ export default function Test() {
     setAge(selectedValue);
   };
 
-  const selectedDropdownData = dropdata.find((itemlist) => itemlist.id === age);
-  const selectedMainData = data.find((item) => item.id === age);
+  const selectedDropdownData = dropDownData.find(
+    (itemlist) => itemlist.id === age
+  );
+  const selectedMainData = dropDownBodyData.find((item) => item.id === age);
 
   const fontz = {
     fontSize: "clamp(25px,2vw,36px)",
@@ -122,8 +124,8 @@ export default function Test() {
                 },
               }}
             >
-              {dropdata &&
-                dropdata.map((itemlist) => (
+              {dropDownData &&
+                dropDownData.map((itemlist) => (
                   <MenuItem key={itemlist.id} value={itemlist.id}>
                     <Typography
                       sx={{
@@ -140,7 +142,7 @@ export default function Test() {
           </FormControl>
         </ThemeProvider>
       </Box>
-      <Internsec contchange={selectedMainData} />
+      <DropdownBody contchange={selectedMainData} />
     </Box>
   );
 }

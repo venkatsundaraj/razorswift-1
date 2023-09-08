@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Image from "next/image";
 import rightarrow from "../../public/images/Arrow.png";
-const updateseccont = () => {
+const PythonPathway = () => {
   return (
     <Box
       sx={{
@@ -30,4 +30,4 @@ const updateseccont = () => {
   );
 };
 
-export default updateseccont;
+export default PythonPathway;

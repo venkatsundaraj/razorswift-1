@@ -3,7 +3,7 @@ import internbulb from "../../public/images/inter-bulb.svg";
 import internplay from "../../public/images/intern-play.svg";
 import internhand from "../../public/images/intern-hand.svg";
 
-const data = [
+const dropDownBodyData = [
   {
     id: "1",
     firstsec: {
@@ -107,4 +107,4 @@ const data = [
   },
 ];
 
-export default data;
+export default dropDownBodyData;

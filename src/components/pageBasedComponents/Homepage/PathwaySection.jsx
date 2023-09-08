@@ -82,7 +82,7 @@ const accordimg = {
   height: "clamp(145px, 11.2vw, 255px)",
 };
 
-export default function pathways() {
+export default function PathwaySection() {
   const [expanded, setExpanded] = React.useState("panel0"); // Change initial value to null
   const [expandedone, setExpandedone] = React.useState("panelone0");
   const handleChange = (panel) => (event, newExpanded) => {

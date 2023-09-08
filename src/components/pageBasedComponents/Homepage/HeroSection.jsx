@@ -4,16 +4,13 @@ import { Stack } from "@mui/material";
 import { Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
-import bannerimg from "../../public/images/banner-img-2.svg";
+import homePageImagePaths from "@/constants/ImagePaths/Homepage/homePageImagePaths";
 import Image from "next/image";
 import { Container } from "@mui/material";
-import Secsec from "../components/updateseccont";
+
 import { motion } from "framer-motion";
-import data from "../utilities/herosec.js";
-const hero = () => {
-  // const fonts = {
-  //   fontSize: "clamp(65px, 5.5vw, 132px)",
-  // };
+import heroSectionData from "@/constants/Homepage/heroSectionData";
+const HeroSection = () => {
   const parag = {
     fontSize: "clamp(22px, 1.8vw, 28px)",
   };
@@ -76,7 +73,6 @@ const hero = () => {
     },
   };
 
-  console.log(data);
   return (
     <Stack
       sx={{
@@ -164,10 +160,10 @@ const hero = () => {
               }}
             >
               <Box style={parag} component="span" sx={{ lineHeight: 1.0 }}>
-                {data[0].title}
+                {heroSectionData[0].title}
               </Box>
               <Box style={parag} component="span" sx={{ lineHeight: 1.0 }}>
-                {data[0].titletwo}
+                {heroSectionData[0].titletwo}
               </Box>
             </Typography>
           </motion.div>
@@ -230,7 +226,7 @@ const hero = () => {
       </Stack>
       <Stack sx={{ position: "absolute", bottom: "50px", right: "0" }}>
         <Box component="span">
-          <Image style={banimg} src={bannerimg} />
+          <Image style={banimg} src={homePageImagePaths.bannerImage} />
         </Box>
       </Stack>
       <motion.div transition={{ staggerChildren: 1.9 }}>
@@ -248,11 +244,11 @@ const hero = () => {
             delay: 2,
           }}
         >
-          <Secsec />
+          {/* <PythonPathway /> */}
         </motion.div>
       </motion.div>
     </Stack>
   );
 };
 
-export default hero;
+export default HeroSection;

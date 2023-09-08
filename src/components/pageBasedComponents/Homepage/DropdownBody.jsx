@@ -3,14 +3,14 @@ import { Box } from "@mui/system";
 import Image from "next/image";
 import { Typography } from "@mui/material";
 import { Link } from "@mui/material";
-import aspiratvect from "../../public/images/aspirants-vector.svg";
+import aspiratvect from "../../../public/images/aspirants-vector.svg";
 import internmain from "../../public/images/placeholder-image.png";
 import internone from "../../public/images/icon-1.svg";
 import Whattoexp from "./whattoexp";
 import data from "../utilities/intern.js";
 import { Container } from "@mui/material";
 
-const internsec = ({ contchange }) => {
+const DropdownBody = ({ contchange }) => {
   console.log(contchange.id);
   const imgs = {
     width: "500px",
@@ -117,4 +117,4 @@ const internsec = ({ contchange }) => {
   );
 };
 
-export default internsec;
+export default DropdownBody;

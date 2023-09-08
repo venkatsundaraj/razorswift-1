@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 import data from "../utilities/whyrazor";
-const whysec = () => {
+const ExploreSection = () => {
   const headfont = {
     fontSize: "clamp(50px, 4vw, 64px)",
   };
@@ -207,4 +207,4 @@ const whysec = () => {
   );
 };
 
-export default whysec;
+export default ExploreSection;

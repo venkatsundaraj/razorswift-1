@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 import Image from "next/image";
 import fivemen from "../../public/images/ready-to.svg";
-const getstart = () => {
+const DemoSection = () => {
   const fonts = {
     fontSize: "clamp(40px, 3vw, 100px)",
   };
@@ -96,4 +96,4 @@ const getstart = () => {
   );
 };
 
-export default getstart;
+export default DemoSection;

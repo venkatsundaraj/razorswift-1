@@ -1,4 +1,4 @@
-const data = [
+const dropDownData = [
   {
     id: "1",
     title: "Aspiring for a dream carrer ?",
@@ -13,4 +13,4 @@ const data = [
   },
 ];
 
-export default data;
+export default dropDownData;
