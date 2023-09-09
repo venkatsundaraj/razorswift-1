@@ -1,21 +1,20 @@
 "use client";
 import * as React from "react";
 import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
+// import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import DropdownBody from "./DropdownBody.jsx";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+// import PropTypes from "prop-types";
+// import Tabs from "@mui/material/Tabs";
+// import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import dropDownBodyData from "@/constants/Homepage/dropDownBodyData.js";
-import dropDownData from "@/constants/Homepage/dropDownData.js";
-import "../styles/dropdown.css";
+import dropDownBodyData from "../../../constants/Homepage/dropDownBodyData.js";
+import dropDownData from "../../../constants/Homepage/dropDownData.js";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import arrow from "../../public/images/dropdown-arrow.svg";
+// import arrow from "../../public/images/dropdown-arrow.svg";
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -128,10 +127,15 @@ export default function DropdownSection() {
                 dropDownData.map((itemlist) => (
                   <MenuItem key={itemlist.id} value={itemlist.id}>
                     <Typography
+                      variant="body1"
                       sx={{
-                        fontFamily: "Urbanist",
                         fontWeight: "700",
-                        fontSize: { xs: "20px", lg: "clamp(25px,2vw,36px)" },
+                        fontSize: {
+                          xs: "20px",
+                          sm: "22px",
+                          md: "clamp(25px,2vw,36px)",
+                          lg: "clamp(25px,2vw,36px)",
+                        },
                       }}
                     >
                       {itemlist.title}

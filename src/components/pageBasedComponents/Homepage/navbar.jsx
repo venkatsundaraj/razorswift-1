@@ -1,12 +1,15 @@
 import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import profilePic from "../../public/images/secondary-logo.png";
-import loginicon from "../../public/images/login-icon-3036.png";
+import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 
-export default function Home() {
+export default function Navbar() {
+  const weblogo = {
+    width: "clamp(200px, 16.4vw, 250px)",
+    height: "auto",
+  };
   return (
     <Box
       sx={{
@@ -19,7 +22,7 @@ export default function Home() {
         zIndex: "20",
       }}
     >
-      <Image src={profilePic} alt="logo" />
+      <Image style={weblogo} src={homePageImagePaths.navbar} alt="logo" />
       <Box
         sx={{
           display: "flex",
@@ -31,7 +34,7 @@ export default function Home() {
       >
         <Box
           sx={{
-            display: "flex",
+            display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
             alignItems: "center",
             gap: 1,
             border: "2px solid",
@@ -43,7 +46,7 @@ export default function Home() {
             pr: 2,
           }}
         >
-          <Image src={loginicon} alt="logo" />
+          <Image src={homePageImagePaths.navbarlogin} alt="logo" />
           <Link
             href=""
             sx={{
@@ -58,7 +61,7 @@ export default function Home() {
         </Box>
         <Box
           sx={{
-            display: "flex",
+            display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
             alignItems: "center",
             gap: 1,
             border: "2px solid",
@@ -70,7 +73,7 @@ export default function Home() {
             pr: 2,
           }}
         >
-          <Image src={loginicon} alt="logo" />
+          <Image src={homePageImagePaths.navbarlogin} alt="logo" />
           <Link
             href=""
             sx={{
@@ -85,7 +88,7 @@ export default function Home() {
         </Box>
         <Box
           sx={{
-            display: "flex",
+            display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
             alignItems: "center",
             gap: 1,
             border: "2px solid",
@@ -97,7 +100,7 @@ export default function Home() {
             pr: 2,
           }}
         >
-          <Image src={loginicon} alt="logo" />
+          <Image src={homePageImagePaths.navbarlogin} alt="logo" />
           <Link
             href=""
             sx={{
@@ -111,7 +114,16 @@ export default function Home() {
           </Link>
         </Box>
         <Button sx={{ display: "flex", flexDirection: "row", gap: 0.5 }}>
-          <Box sx={{ color: "#672376", fontSize: 24, fontWeight: 600 }}>M</Box>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
+              color: "#672376",
+              fontSize: 24,
+              fontWeight: 600,
+            }}
+          >
+            M
+          </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
             <svg
               class="ham-bur-one"
@@ -162,8 +174,26 @@ export default function Home() {
               />
             </svg>
           </Box>
-          <Box sx={{ color: "#672376", fontSize: 24, fontWeight: 600 }}>N</Box>
-          <Box sx={{ color: "#672376", fontSize: 24, fontWeight: 600 }}>U</Box>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
+              color: "#672376",
+              fontSize: 24,
+              fontWeight: 600,
+            }}
+          >
+            N
+          </Box>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
+              color: "#672376",
+              fontSize: 24,
+              fontWeight: 600,
+            }}
+          >
+            U
+          </Box>
         </Button>
       </Box>
     </Box>

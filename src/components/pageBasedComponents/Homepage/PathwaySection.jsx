@@ -7,9 +7,9 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
-import data from "../utilities/pathway.js";
-import datatwo from "../utilities/pathwaytwo.js";
-import pathwayacc from "../../public/images/pathway-img.svg";
+import data from "../../../constants/Homepage/pathway.js";
+import datatwo from "../../../constants/Homepage/pathwaytwo.js";
+import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
 import Image from "next/image";
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -46,33 +46,31 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 const fonttitle = {
-  fontSize: "clamp(25px, 2vw, 36px)",
-  fontFamily: "Urbanist",
   fontWeight: "bold",
 };
 
 const fontdes = {
   fontSize: "clamp(15px, 1.2vw, 20px)",
-  fontFamily: "Urbanist",
+
   fontWeight: "500",
   height: "clamp(75px, 5.5vw, 110px)",
 };
 
 const fontaspi = {
   fontSize: "clamp(34px, 2.5vw, 44px)",
-  fontFamily: "Urbanist",
+
   fontWeight: "500",
 };
 
 const fontaspitwo = {
   fontSize: "clamp(20px, 1.5vw, 28px)",
-  fontFamily: "Urbanist",
+
   fontWeight: "500",
 };
 
 const fontaspithree = {
   fontSize: "clamp(15px, 1.2vw, 20px)",
-  fontFamily: "Urbanist",
+
   fontWeight: "500",
 };
 
@@ -100,9 +98,10 @@ export default function PathwaySection() {
       }}
     >
       <Typography
+        variant="h1"
         sx={{
           color: "common.white",
-          fontFamily: "Bebas Neue",
+
           fontSize: { xs: "35px", lg: "clamp(45px, 3.5vw, 64px)" },
           textAlign: { xs: "center", lg: "left" },
         }}
@@ -112,19 +111,28 @@ export default function PathwaySection() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", lg: "row" },
+          flexDirection: { xs: "column", md: "row", lg: "row" },
           justifyContent: "space-around",
         }}
       >
         {/* first sec*/}
-        <Box sx={{ width: "35vw" }}>
-          <Typography style={fontaspi} sx={{ color: "common.white" }}>
+        <Box sx={{ width: { xs: "100vw", md: "35vw", lg: "35vw" } }}>
+          <Typography
+            variant="body1"
+            style={fontaspi}
+            sx={{ color: "common.white" }}
+          >
             Aspirants
           </Typography>
-          <Typography style={fontaspitwo} sx={{ color: "common.white" }}>
+          <Typography
+            variant="body1"
+            style={fontaspitwo}
+            sx={{ color: "common.white" }}
+          >
             Be a niche specialist to achieve your potential
           </Typography>
           <Typography
+            variant="body1"
             style={fontaspithree}
             sx={{
               color: "common.white",
@@ -153,7 +161,7 @@ export default function PathwaySection() {
                       : index === data.length - 1
                       ? "0px 0px 40px 40px"
                       : "0",
-                  width: { xs: "325px", lg: "100%" },
+                  width: { xs: "325px", sm: "730px", md: "100%", lg: "100%" },
                 }}
                 expanded={expanded === `panel${index}`} // Use index to identify each accordion
                 onChange={handleChange(`panel${index}`)} // Use index to identify each accordion
@@ -170,7 +178,20 @@ export default function PathwaySection() {
                   aria-controls={`panel${index}d-content`} // Use index to identify each accordion
                   id={`panel${index}d-header`} // Use index to identify each accordion
                 >
-                  <Typography style={fonttitle}>{item.title}</Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontSize: {
+                        lg: "clamp(25px, 2vw, 36px)",
+                        md: "clamp(22px, 2vw, 36px)",
+                        sm: "20px",
+                        xs: "20px",
+                      },
+                    }}
+                    style={fonttitle}
+                  >
+                    {item.title}
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails sx={{ border: "none", height: "40vh" }}>
                   <Box
@@ -180,10 +201,17 @@ export default function PathwaySection() {
                       alignItems: "flex-end",
                     }}
                   >
-                    <Typography sx={{ marginLeft: "10px" }} style={fontdes}>
+                    <Typography
+                      variant="body1"
+                      sx={{ marginLeft: "10px" }}
+                      style={fontdes}
+                    >
                       {item.description}
                     </Typography>
-                    <Image style={accordimg} src={pathwayacc} />
+                    <Image
+                      style={accordimg}
+                      src={homePageImagePaths.pathwayacc}
+                    />
                   </Box>
                 </AccordionDetails>
               </Accordion>
@@ -191,7 +219,7 @@ export default function PathwaySection() {
           )}
         </Box>
         {/* second sec*/}
-        <Box sx={{ width: "35vw" }}>
+        <Box sx={{ width: { xs: "100vw", md: "35vw", lg: "35vw" } }}>
           <Typography style={fontaspi} sx={{ color: "common.white" }}>
             Businesses
           </Typography>
@@ -227,7 +255,7 @@ export default function PathwaySection() {
                       : index === datatwo.length - 1
                       ? "0px 0px 40px 40px"
                       : "0",
-                  width: { xs: "325px", lg: "100%" },
+                  width: { xs: "325px", sm: "730px", md: "100%", lg: "100%" },
                 }}
                 expanded={expandedone === `panelone${index}`} // Use index to identify each accordion
                 onChange={handleChangeone(`panelone${index}`)} // Use index to identify each accordion
@@ -245,7 +273,19 @@ export default function PathwaySection() {
                   aria-controls={`panelone${index}d-content`} // Use index to identify each accordion
                   id={`panelone${index}d-header`} // Use index to identify each accordion
                 >
-                  <Typography style={fonttitle}>{item.title}</Typography>
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        lg: "clamp(25px, 2vw, 36px)",
+                        md: "clamp(22px, 2vw, 36px)",
+                        sm: "20px",
+                        xs: "20px",
+                      },
+                    }}
+                    style={fonttitle}
+                  >
+                    {item.title}
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails sx={{ border: "none", height: "40vh" }}>
                   <Box
@@ -258,7 +298,10 @@ export default function PathwaySection() {
                     <Typography sx={{ marginLeft: "10px" }} style={fontdes}>
                       {item.description}
                     </Typography>
-                    <Image style={accordimg} src={pathwayacc} />
+                    <Image
+                      style={accordimg}
+                      src={homePageImagePaths.pathwayacc}
+                    />
                   </Box>
                 </AccordionDetails>
               </Accordion>

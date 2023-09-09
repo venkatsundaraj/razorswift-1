@@ -3,11 +3,8 @@ import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import { Link } from "@mui/material";
 import Image from "next/image";
-import footerlogo from "../../public/images/footer-logo-white.png";
-import twitt from "../../public/images/twitter-logo.svg";
-import fb from "../../public/images/facebook-logo.svg";
-import linkedin from "../../public/images/linkedin-logo.svg";
-import insta from "../../public/images/instagram-logo.svg";
+
+import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
 const footer = () => {
   const fontstyle = {
     color: "white",
@@ -37,40 +34,30 @@ const footer = () => {
         }}
       >
         <Typography
+          variant="body1"
           sx={{
             color: "common.white",
             fontSize: "64px",
-            fontFamily: "urbanist",
+
             fontWeight: "600",
             textAlign: "center",
             lineHeight: "1.2",
             mb: 5,
-            fontSize: { xs: "25px", lg: "clamp(40px,3.1vw,64px)" },
+            fontSize: {
+              xs: "25px",
+              md: "clamp(40px,3.1vw,64px)",
+              lg: "clamp(40px,3.1vw,64px)",
+            },
           }}
         >
           New Age Marketplace for
           <br /> Talent Acquisition
         </Typography>
         <Typography
-          sx={{
-            color: "common.white",
-            fontSize: "64px",
-            fontFamily: "urbanist",
-            fontWeight: "600",
-            textAlign: "center",
-            lineHeight: "1.2",
-            mb: 5,
-            fontSize: { xs: "25px", lg: "clamp(40px,3.1vw,64px)" },
-          }}
-        >
-          New Age Marketplace for
-          <br /> Talent Acquisition
-        </Typography>
-        <Typography
+          variant="body1"
           sx={{
             color: "common.white",
 
-            fontFamily: "urbanist",
             mb: 5,
             fontSize: { xs: "17px", lg: "28px" },
           }}
@@ -81,9 +68,9 @@ const footer = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
-          alignItems: "flex-start",
-          gap: "150px",
+          flexDirection: { xs: "column-reverse", md: "row", lg: "row" },
+          alignItems: { xs: "center", lg: "flex-start" },
+          gap: { xs: "50px", lg: "150px" },
           mb: 8,
         }}
       >
@@ -95,7 +82,7 @@ const footer = () => {
           }}
         >
           <Box>
-            <Image src={footerlogo} />
+            <Image src={homePageImagePaths.footerlogo} />
           </Box>
           <Box
             sx={{
@@ -104,120 +91,128 @@ const footer = () => {
               justifyContent: "space-between",
             }}
           >
-            <Image style={footerimg} src={twitt} />
-            <Image style={footerimg} src={fb} />
-            <Image style={footerimg} src={linkedin} />
-            <Image style={footerimg} src={insta} />
+            <Image style={footerimg} src={homePageImagePaths.twitt} />
+            <Image style={footerimg} src={homePageImagePaths.fb} />
+            <Image style={footerimg} src={homePageImagePaths.linkedin} />
+            <Image style={footerimg} src={homePageImagePaths.insta} />
           </Box>
         </Box>
-        <Box sx={{ display: "flex", flexDirection: "column", mt: "3%" }}>
-          <Link
-            underline="none"
-            style={fontstyle}
-            sx={{
-              fontFamily: "urbanist",
-              cursor: "pointer",
-              fontWeight: "600",
-              lineHeight: 2,
-            }}
-          >
-            Solutions
-          </Link>
-          <Link
-            underline="none"
-            style={fontstyle}
-            sx={{
-              fontFamily: "urbanist",
-              cursor: "pointer",
-              fontWeight: "300",
-              lineHeight: 2,
-            }}
-          >
-            Aspirants
-          </Link>
-          <Link
-            underline="none"
-            style={fontstyle}
-            sx={{
-              fontFamily: "urbanist",
-              cursor: "pointer",
-              fontWeight: "300",
-              lineHeight: 2,
-            }}
-          >
-            Businesses
-          </Link>
-          <Link
-            underline="none"
-            style={fontstyle}
-            sx={{
-              fontFamily: "urbanist",
-              cursor: "pointer",
-              fontWeight: "300",
-              lineHeight: 2,
-            }}
-          >
-            Partners
-          </Link>
-        </Box>
-        <Box sx={{ display: "flex", flexDirection: "column", mt: "3%" }}>
-          <Link
-            underline="none"
-            style={fontstyle}
-            sx={{
-              fontFamily: "urbanist",
-              cursor: "pointer",
-              fontWeight: "600",
-              lineHeight: 2,
-            }}
-          >
-            Courses
-          </Link>
-          <Link
-            underline="none"
-            style={fontstyle}
-            sx={{
-              fontFamily: "urbanist",
-              cursor: "pointer",
-              fontWeight: "600",
-              lineHeight: 2,
-            }}
-          >
-            About
-          </Link>
-          <Link
-            underline="none"
-            style={fontstyle}
-            sx={{
-              fontFamily: "urbanist",
-              cursor: "pointer",
-              fontWeight: "600",
-              lineHeight: 2,
-            }}
-          >
-            Contact Us
-          </Link>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            gap: { xs: "50px", lg: "150px" },
+          }}
+        >
+          <Box sx={{ display: "flex", flexDirection: "column", mt: "3%" }}>
+            <Link
+              variant="body1"
+              underline="none"
+              style={fontstyle}
+              sx={{
+                cursor: "pointer",
+                fontWeight: "600",
+                lineHeight: 2,
+              }}
+            >
+              Solutions
+            </Link>
+            <Link
+              variant="body1"
+              underline="none"
+              style={fontstyle}
+              sx={{
+                cursor: "pointer",
+                fontWeight: "300",
+                lineHeight: 2,
+              }}
+            >
+              Aspirants
+            </Link>
+            <Link
+              variant="body1"
+              underline="none"
+              style={fontstyle}
+              sx={{
+                cursor: "pointer",
+                fontWeight: "300",
+                lineHeight: 2,
+              }}
+            >
+              Businesses
+            </Link>
+            <Link
+              variant="body1"
+              underline="none"
+              style={fontstyle}
+              sx={{
+                cursor: "pointer",
+                fontWeight: "300",
+                lineHeight: 2,
+              }}
+            >
+              Partners
+            </Link>
+          </Box>
+          <Box sx={{ display: "flex", flexDirection: "column", mt: "3%" }}>
+            <Link
+              variant="body1"
+              underline="none"
+              style={fontstyle}
+              sx={{
+                cursor: "pointer",
+                fontWeight: "600",
+                lineHeight: 2,
+              }}
+            >
+              Courses
+            </Link>
+            <Link
+              variant="body1"
+              underline="none"
+              style={fontstyle}
+              sx={{
+                cursor: "pointer",
+                fontWeight: "600",
+                lineHeight: 2,
+              }}
+            >
+              About
+            </Link>
+            <Link
+              variant="body1"
+              underline="none"
+              style={fontstyle}
+              sx={{
+                cursor: "pointer",
+                fontWeight: "600",
+                lineHeight: 2,
+              }}
+            >
+              Contact Us
+            </Link>
+          </Box>
         </Box>
       </Box>
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
-          gap: "160px",
+          gap: { xs: "0", md: "160px", lg: "160px" },
           borderTop: "1px solid",
           borderColor: "common.white",
           width: "100%",
           pt: "3%",
         }}
       >
-        <Typography sx={{ color: "common.white", fontFamily: "urbanist" }}>
+        <Typography variant="body1" sx={{ color: "common.white" }}>
           2023 Razorswift. All rights reserved.
         </Typography>
         <Box sx={{ display: "flex", gap: "50px" }}>
-          <Typography sx={{ color: "common.white", fontFamily: "urbanist" }}>
+          <Typography variant="body1" sx={{ color: "common.white" }}>
             Terms of Services
           </Typography>
-          <Typography sx={{ color: "common.white", fontFamily: "urbanist" }}>
+          <Typography variant="body1" sx={{ color: "common.white" }}>
             Privacy Policy
           </Typography>
         </Box>

@@ -2,14 +2,14 @@ import React from "react";
 import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import Link from "@mui/material/Link";
-import data from "../utilities/whyrazor";
+import data from "../../../constants/Homepage/whyrazor.js";
 const ExploreSection = () => {
   const headfont = {
     fontSize: "clamp(50px, 4vw, 64px)",
   };
-  const paraone = {
-    fontSize: "clamp(15px, 1.4vw, 20px)",
-  };
+  // const paraone = {
+  //   fontSize: "clamp(15px, 1.4vw, 20px)",
+  // };
   const numbersec = {
     fontSize: "clamp(30px, 2.4vw, 40px)",
   };
@@ -21,13 +21,17 @@ const ExploreSection = () => {
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", lg: "row" },
+        flexDirection: { xs: "column", md: "row", lg: "row" },
         alignItems: "center",
         height: "100vh",
         pl: "15px",
         pr: "15px",
-        justifyContent: { xs: "flex-start", lg: "space-around" },
-        alignItems: { xs: "flex-start", lg: "center" },
+        justifyContent: {
+          xs: "flex-start",
+          md: "space-around",
+          lg: "space-around",
+        },
+        alignItems: { xs: "flex-start", md: "center", lg: "center" },
       }}
     >
       <Box
@@ -40,43 +44,57 @@ const ExploreSection = () => {
         }}
       >
         <Typography
+          variant="h1"
           sx={{
             color: "primary.purp",
-            fontSize: { xs: "30px", lg: "clamp(50px, 4vw, 64px)" },
-            fontFamily: "Bebas Neue",
+            fontSize: {
+              xs: "25px",
+              md: "clamp(50px, 4vw, 64px)",
+              lg: "clamp(50px, 4vw, 64px)",
+            },
+
             textAlign: "center",
-            mb: "2%",
-            width: { xs: "300px", lg: "100%" },
+            margin: "15px 0",
+            width: { xs: "300px", sm: "730px", md: "100%", lg: "100%" },
           }}
         >
           {data[0].title}
         </Typography>
         <Typography
-          style={paraone}
+          variant="body1"
           sx={{
-            fontSize: "20px",
+            fontSize: {
+              xs: "15px",
+              md: "clamp(15px, 1.4vw, 20px)",
+              lg: "clamp(15px, 1.4vw, 20px)",
+            },
             textAlign: "center",
             mb: "3%",
-            fontFamily: "urbanist",
+
             textAlign: "justify",
-            width: { xs: "300px", lg: "100%" },
+            width: { xs: "300px", sm: "730px", md: "100%", lg: "100%" },
           }}
         >
           {data[0].description}
         </Typography>
         <Typography
-          style={paraone}
+          variant="body1"
           sx={{
-            fontSize: "20px",
+            fontSize: {
+              xs: "15px",
+              md: "clamp(15px, 1.4vw, 20px)",
+              lg: "clamp(15px, 1.4vw, 20px)",
+            },
             textAlign: "justify",
             mb: "4%",
-            fontFamily: "urbanist",
-            width: { xs: "300px", lg: "100%" },
+
+            width: { xs: "300px", sm: "730px", md: "100%", lg: "100%" },
           }}
         >
           {data[0].descriptiontwo}
         </Typography>
         <Link
+          variant="body1"
           underline="none"
           sx={{
             backgroundColor: "primary.purp",
@@ -86,9 +104,8 @@ const ExploreSection = () => {
             pl: "30px",
             pr: "30px",
             borderRadius: "200px",
-
+            margin: "15px 0",
             cursor: "pointer",
-            fontFamily: "urbanist",
           }}
         >
           Explore
@@ -98,7 +115,7 @@ const ExploreSection = () => {
         sx={{
           display: "flex",
           flexDirection: "row",
-          width: { xs: "100%", lg: "45vw" },
+          width: { xs: "100%", md: "45vw", lg: "45vw" },
         }}
       >
         <Box
@@ -117,15 +134,13 @@ const ExploreSection = () => {
             }}
           >
             <Typography
+              variant="body1"
               style={numbersec}
-              sx={{ color: "primary.purp", fontFamily: "Urbanist" }}
+              sx={{ color: "primary.purp" }}
             >
               70%
             </Typography>
-            <Typography
-              style={numbersecdescription}
-              sx={{ fontFamily: "Urbanist" }}
-            >
+            <Typography variant="body1" style={numbersecdescription} sx={{}}>
               <b>Improvement</b> in new hire <b>retention.</b>
             </Typography>
           </Box>
@@ -138,15 +153,13 @@ const ExploreSection = () => {
             }}
           >
             <Typography
+              variant="body1"
               style={numbersec}
-              sx={{ color: "primary.purp", fontFamily: "Urbanist" }}
+              sx={{ color: "primary.purp" }}
             >
               70%
             </Typography>
-            <Typography
-              style={numbersecdescription}
-              sx={{ fontFamily: "Urbanist" }}
-            >
+            <Typography variant="body1" style={numbersecdescription} sx={{}}>
               <b>Improvement</b> in new hire <b>retention.</b>
             </Typography>
           </Box>
@@ -157,7 +170,7 @@ const ExploreSection = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: { xs: "flex-start", lg: "flex-end" },
-            marginLeft: { xs: "15px", lg: "30px" },
+            marginLeft: { xs: "15px", md: "30px", lg: "30px" },
           }}
         >
           <Box
@@ -168,15 +181,13 @@ const ExploreSection = () => {
             }}
           >
             <Typography
+              variant="body1"
               style={numbersec}
-              sx={{ color: "primary.purp", fontFamily: "Urbanist" }}
+              sx={{ color: "primary.purp" }}
             >
               70%
             </Typography>
-            <Typography
-              style={numbersecdescription}
-              sx={{ fontFamily: "Urbanist" }}
-            >
+            <Typography variant="body1" style={numbersecdescription} sx={{}}>
               <b>Improvement</b> in new hire <b>retention.</b>
             </Typography>
           </Box>
@@ -189,15 +200,13 @@ const ExploreSection = () => {
             }}
           >
             <Typography
+              variant="body1"
               style={numbersec}
-              sx={{ color: "primary.purp", fontFamily: "Urbanist" }}
+              sx={{ color: "primary.purp" }}
             >
               70%
             </Typography>
-            <Typography
-              style={numbersecdescription}
-              sx={{ fontFamily: "Urbanist" }}
-            >
+            <Typography variant="body1" style={numbersecdescription} sx={{}}>
               <b>Improvement</b> in new hire <b>retention.</b>
             </Typography>
           </Box>
