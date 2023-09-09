@@ -1,6 +1,8 @@
 "use client";
 import { createTheme } from "@mui/material/styles";
+
 import { Urbanist, Bebas_Neue } from "next/font/google";
+
 const urbanist = Urbanist({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
@@ -30,7 +32,22 @@ const theme = createTheme({
       redpinktwo: "#FFE3E3",
       redpinkthree: "#EDD8F2",
     },
+    pinkPalette: {
+      dark: "#A62973",
+      light: "#EE5064",
+      superLight: "#FCD3D1",
+    },
+    primaryPalette: {
+      white: "#FFFFFF",
+      black: "#3A3A3A",
+    },
+    violetPalette: {
+      dark: "#672376",
+      light: "#DAB0E3",
+      superLight: "#EDD8F2",
+    },
   },
+
   //Font family
   typography: {
     // fontFamily: [bebasNeue.style.fontFamily, urbanist.style.fontFamily],
