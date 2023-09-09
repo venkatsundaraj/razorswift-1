@@ -6,7 +6,7 @@ const FillButton = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.pinkPalette.dark,
   color: theme.palette.primaryPalette.white,
   borderRadius: theme.spacing(3),
-  padding: "8px 20px",
+  padding: theme.spacing(1, 3),
   textTransform: "inherit",
   "&:hover": {
     backgroundColor: theme.palette.pinkPalette.dark,

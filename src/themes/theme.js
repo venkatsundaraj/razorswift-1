@@ -38,10 +38,16 @@ const theme = createTheme({
     pinkPalette: {
       dark: "#A62973",
       light: "#EE5064",
+      superLight: "#FCD3D1",
     },
     primaryPalette: {
       white: "#FFFFFF",
       black: "#3A3A3A",
+    },
+    violetPalette: {
+      dark: "#672376",
+      light: "#DAB0E3",
+      superLight: "#EDD8F2",
     },
   },
 

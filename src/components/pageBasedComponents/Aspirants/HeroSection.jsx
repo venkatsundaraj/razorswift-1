@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, Container } from "@mui/material";
 import PrimaryHeading from "@/components/headingComponents/PrimaryHeading";
 import ExtraSuperText from "@/components/headingComponents/ExtraSuperText";
 import SuperText from "@/components/headingComponents/SuperText";
@@ -13,44 +13,70 @@ import ParagraphHeading from "@/components/headingComponents/ParagraphHeading";
 import { heroSectionData } from "@/constants/Aspirants/aspirantPageData";
 import PrimaryFillButton from "@/components/buttonComponents/PrimaryFillButton";
 import Link from "next/link";
-import CustomImage from "@/components/globalComponents/CustomImage/CustomImage";
+import { TickerBoxData } from "@/constants/Aspirants/aspirantPageData";
+import TickerComponent from "@/components/TickerComponent/TickerComponent";
+import CustomSection from "@/components/globalComponents/CustomContainer/CustomSection";
 
 function HeroSection() {
   return (
-    <ViewportBoxComponent
-      sx={{
-        flexDirection: "column",
-      }}
-      component="section"
-    >
-      <CenteredFlexComponent>
-        <Image
-          objectFit="cover"
-          src={aspirantPageImagePaths.homePage.icon2}
-          style={{ width: "clamp(60px,12vw,140px)", height: "auto" }}
-        />
-        <SuperText component="h2">{heroSectionData.heading.primary}</SuperText>
-      </CenteredFlexComponent>
-      <CenteredFlexComponent>
-        <ExtraSuperText component="h1" variant="h1">
-          {heroSectionData.heading.secondary}
-        </ExtraSuperText>
-        <Image
-          width={130}
-          objectFit="cover"
-          src={aspirantPageImagePaths.homePage.icon1}
-          style={{ width: "clamp(60px,12vw,140px)", height: "auto" }}
-        />
-      </CenteredFlexComponent>
-      <ParagraphHeading component="p" align="center" sx={{ maxWidth: "400px" }}>
-        {heroSectionData.description}
-      </ParagraphHeading>
-      <Link href="#">
-        <PrimaryFillButton varient="contained" sx={{ marginTop: "18px" }}>
-          {heroSectionData.buttonContent}
-        </PrimaryFillButton>
-      </Link>
-    </ViewportBoxComponent>
+    <CustomSection style={{ padding: "0px" }}>
+      <Container
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          height: "calc(100vh - 65px)",
+          width: "100%",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <CenteredFlexComponent sx={{ gap: "10px" }}>
+          <Image
+            src={aspirantPageImagePaths.homePage.icon2}
+            style={{
+              width: "clamp(60px,12vw,140px)",
+              height: "auto",
+              objectFit: "cover",
+            }}
+            alt="Unlock your potential"
+          />
+          <SuperText component="h2" sx={{ textTransform: "uppercase" }}>
+            {heroSectionData.heading.primary}
+          </SuperText>
+        </CenteredFlexComponent>
+        <CenteredFlexComponent sx={{ gap: "10px" }}>
+          <ExtraSuperText component="h1" sx={{ textTransform: "uppercase" }}>
+            {heroSectionData.heading.secondary}
+          </ExtraSuperText>
+          <Image
+            width={130}
+            src={aspirantPageImagePaths.homePage.icon1}
+            style={{
+              width: "clamp(60px,12vw,140px)",
+              height: "auto",
+              objectFit: "cover",
+            }}
+            alt="Unlock your potential"
+          />
+        </CenteredFlexComponent>
+        <ParagraphHeading
+          varient="body1"
+          align="center"
+          sx={{ maxWidth: "400px", color: "primaryPalette.black" }}
+        >
+          {heroSectionData.description}
+        </ParagraphHeading>
+        <Link href="#">
+          <PrimaryFillButton varient="contained" sx={{ marginTop: "18px" }}>
+            {heroSectionData.buttonContent}
+          </PrimaryFillButton>
+        </Link>
+      </Container>
+      <TickerComponent
+        data={TickerBoxData}
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+      />
+    </CustomSection>
   );
 }
 

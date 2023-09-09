@@ -3,7 +3,6 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const Paragraph = styled(Typography)(({ theme }) => ({
-  color: theme.palette.primaryPalette.black,
   fontSize: "14px",
   fontWeight: 500,
   fontFamily: theme.typography.body1,
