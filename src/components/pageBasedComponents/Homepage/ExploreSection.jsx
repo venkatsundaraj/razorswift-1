@@ -114,6 +114,7 @@ const ExploreSection = () => {
         sx={{
           display: "flex",
           flexDirection: "row",
+          justifyContent: "center",
           width: { xs: "100%", md: "45vw", lg: "45vw" },
         }}
       >
