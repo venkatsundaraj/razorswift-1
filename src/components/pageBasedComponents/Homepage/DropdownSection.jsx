@@ -27,7 +27,6 @@ export default function DropdownSection() {
 
   const handleChange = (event) => {
     const selectedValue = event.target.value;
-    console.log(selectedValue);
     setAge(selectedValue);
   };
 

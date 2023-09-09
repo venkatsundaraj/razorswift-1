@@ -7,7 +7,6 @@ import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageI
 import Whattoexp from "./whattoexp";
 
 const DropdownBody = ({ contchange }) => {
-  console.log(contchange.id);
   const imgs = {
     width: "500px",
     height: "initial",

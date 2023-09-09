@@ -20,6 +20,7 @@ export default function Navbar() {
         position: "fixed",
         width: "100vw",
         zIndex: "20",
+        backgroundColor: "white",
       }}
     >
       <Image style={weblogo} src={homePageImagePaths.navbar} alt="logo" />

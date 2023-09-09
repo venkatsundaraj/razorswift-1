@@ -16,7 +16,6 @@ const ExploreSection = () => {
   const numbersecdescription = {
     fontSize: "clamp(10px, 1.1vw, 16px)",
   };
-  console.log(data);
   return (
     <Box
       sx={{
