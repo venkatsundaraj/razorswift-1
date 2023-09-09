@@ -173,7 +173,7 @@ const HeroSection = () => {
                 display: "flex",
                 flexDirection: "column",
                 mb: 2,
-                fontFamily: "theme.Urbanist",
+
                 fontSize: {
                   lg: "22px",
                   md: "28px",
@@ -205,7 +205,6 @@ const HeroSection = () => {
                 display: "flex",
                 flexDirection: "row",
                 gap: 3,
-                fontFamily: "Urbanist",
               }}
             >
               <Link
@@ -224,10 +223,7 @@ const HeroSection = () => {
                   alignSelf: "center",
                 }}
               >
-                <Typography sx={{ fontFamily: "theme.Urbanist" }}>
-                  {" "}
-                  Build Your Profile
-                </Typography>
+                <Typography sx={{}}> Build Your Profile</Typography>
               </Link>
               <Link
                 sx={{
@@ -243,10 +239,7 @@ const HeroSection = () => {
                   alignSelf: "center",
                 }}
               >
-                <Typography sx={{ fontFamily: "theme.Urbanist" }}>
-                  {" "}
-                  Get a Demo
-                </Typography>
+                <Typography> Get a Demo</Typography>
               </Link>
             </Stack>
           </motion.div>

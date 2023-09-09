@@ -49,12 +49,12 @@ export default function Navbar() {
         >
           <Image src={homePageImagePaths.navbarlogin} alt="logo" />
           <Link
+            variant="body1"
             href=""
             sx={{
               fontSize: 24,
               color: "common.black",
               textDecoration: "none",
-              fontFamily: "Urbanist",
             }}
           >
             Partners
@@ -76,12 +76,12 @@ export default function Navbar() {
         >
           <Image src={homePageImagePaths.navbarlogin} alt="logo" />
           <Link
+            variant="body1"
             href=""
             sx={{
               fontSize: 24,
               color: "common.black",
               textDecoration: "none",
-              fontFamily: "Urbanist",
             }}
           >
             Aspirants
@@ -103,12 +103,12 @@ export default function Navbar() {
         >
           <Image src={homePageImagePaths.navbarlogin} alt="logo" />
           <Link
+            variant="body1"
             href=""
             sx={{
               fontSize: 24,
               color: "common.black",
               textDecoration: "none",
-              fontFamily: "Urbanist",
             }}
           >
             Business
