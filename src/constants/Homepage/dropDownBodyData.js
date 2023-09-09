@@ -1,7 +1,4 @@
-import internone from "../../public/images/icon-1.svg";
-import internbulb from "../../public/images/inter-bulb.svg";
-import internplay from "../../public/images/intern-play.svg";
-import internhand from "../../public/images/intern-hand.svg";
+import homePageImagePaths from "../ImagePaths/Homepage/homePageImagePaths";
 
 const dropDownBodyData = [
   {
@@ -15,22 +12,22 @@ const dropDownBodyData = [
     },
     secondec: [
       {
-        image: internone,
+        image: homePageImagePaths.internone,
         title: "College to career roadmap.",
         description: "Bridge the gap between education and employability.",
       },
       {
-        image: internbulb,
+        image: homePageImagePaths.internbulb,
         title: "Gain insights on skill expectation.",
         description: "Leverage mentors, corporate cohorts and communities.",
       },
       {
-        image: internplay,
+        image: homePageImagePaths.internplay,
         title: "Stay ahead of the heap.",
         description: "Job recommendations based on latest trends.",
       },
       {
-        image: internhand,
+        image: homePageImagePaths.internhand,
         title: "Attract best salaries.",
         description: "Negotiate better with corporate bench mark reports.",
       },
@@ -46,25 +43,25 @@ const dropDownBodyData = [
     },
     secondec: [
       {
-        image: internone,
+        image: homePageImagePaths.internone,
         title: "Job ready talent on Day 1",
         description:
           "Manage skill gap and talent shortage with customized pathways.",
       },
       {
-        image: internbulb,
+        image: homePageImagePaths.internbulb,
         title: "Unifried",
         description:
           "Seamless collaboration with talent partners with pathways.",
       },
       {
-        image: internplay,
+        image: homePageImagePaths.internplay,
         title: "Standardized profiles",
         description:
           "Standardized assessments and AI enriched profiles with defined pathways",
       },
       {
-        image: internhand,
+        image: homePageImagePaths.internhand,
         title: "Be a Marquee employer",
         description:
           "Enhanced exposure and increased recognition among aspirants with corporate pathways",
@@ -81,25 +78,25 @@ const dropDownBodyData = [
     },
     secondec: [
       {
-        image: internone,
+        image: homePageImagePaths.internone,
         title: "Collaborate for standardization",
         description:
           "L&D Partners, assessment partners and recruiters collaboration.",
       },
       {
-        image: internbulb,
+        image: homePageImagePaths.internbulb,
         title: "Plug into skill, domain and corporate pathways",
         description:
           "Seamless collaboration and streamlined process within pathways.",
       },
       {
-        image: internplay,
+        image: homePageImagePaths.internplay,
         title: "Reduce cost to market",
         description:
           "Enhanced exposure and brand recognition among aspirants through AI based recommendations",
       },
       {
-        image: internhand,
+        image: homePageImagePaths.internhand,
         title: "Grow exponentially with our ever growing user base",
         description: "AI based recommendation of your services to aspirants.",
       },
