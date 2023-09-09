@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Image from "next/image";
-import rightarrow from "../../public/images/Arrow.png";
+import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
 const PythonPathway = () => {
   return (
     <Box
@@ -18,13 +18,18 @@ const PythonPathway = () => {
       }}
     >
       <Typography
-        component="p"
-        sx={{ fontSize: { xs: "14px", lg: "28px" }, fontFamily: "Urbanist" }}
+        variant="body1"
+        sx={{
+          fontSize: { xs: "14px", lg: "28px" },
+        }}
       >
-        Check out the newly added Python pathway
+        Check out the newly added{" "}
+        <Box component="span" sx={{ fontWeight: "600" }}>
+          Python pathway
+        </Box>
       </Typography>
       <Box sx={{ marginTop: "10px" }} component="span">
-        <Image src={rightarrow} />
+        <Image src={homePageImagePaths.secsecpyth} />
       </Box>
     </Box>
   );

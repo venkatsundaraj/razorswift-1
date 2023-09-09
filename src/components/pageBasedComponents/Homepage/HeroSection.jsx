@@ -4,18 +4,19 @@ import { Stack } from "@mui/material";
 import { Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
-import homePageImagePaths from "@/constants/ImagePaths/Homepage/homePageImagePaths";
+import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
 import Image from "next/image";
-import { Container } from "@mui/material";
-
+import theme from "../../../themes/theme";
 import { motion } from "framer-motion";
-import heroSectionData from "@/constants/Homepage/heroSectionData";
+import heroSectionData from "../../../constants/Homepage/heroSectionData";
+import PythonPathway from "./PythonPathway";
+import styled from "@emotion/styled";
+
+const TypographyOne = styled(Typography)(({ theme }) => ({}));
+
 const HeroSection = () => {
-  const parag = {
-    fontSize: "clamp(22px, 1.8vw, 28px)",
-  };
   const banimg = {
-    width: "65vw",
+    width: "clamp(370px, 63.5vw, 1300px)",
     height: "auto",
   };
   const firstsec = {
@@ -82,7 +83,18 @@ const HeroSection = () => {
         overflowY: "hidden",
       }}
     >
-      <Stack sx={{ zIndex: "1", marginTop: "120px", marginLeft: "30px" }}>
+      <Stack
+        sx={{
+          zIndex: "1",
+          marginTop: {
+            lg: "150px",
+            md: "clamp(150px, 11.6vw, 180px)",
+            sm: "160px",
+            xs: "160px",
+          },
+          marginLeft: "30px",
+        }}
+      >
         <Stack sx={{ mb: 2 }}>
           <motion.div transition={{ staggerChildren: 1.9 }}>
             <motion.div
@@ -91,15 +103,17 @@ const HeroSection = () => {
               whileInView={"onscreen"}
               viewport={{ once: true }}
             >
+              {/* <TypographyOne variant="h1">Hello World</TypographyOne> */}
               <Typography
+                variant="h1"
                 sx={{
                   color: "primary.mainone",
                   lineHeight: "1.0",
-                  fontFamily: "Bebas Neue",
                   fontSize: {
-                    xs: "clamp(30px, 2.4vw, 40px)",
-                    sm: "clamp(40px, 3.1vw, 50px)",
-                    lg: "clamp(65px, 5.5vw, 132px)",
+                    lg: "clamp(70px, 5.4vw, 100px)",
+                    md: "clamp(70px, 5.4vw, 100px)",
+                    sm: "40px",
+                    xs: "40px",
                   },
                 }}
               >
@@ -122,14 +136,16 @@ const HeroSection = () => {
               viewport={{ once: true }}
             >
               <Typography
+                variant="h1"
                 sx={{
                   color: "primary.mainone",
                   lineHeight: "1.0",
-                  fontFamily: "Bebas Neue",
+
                   fontSize: {
-                    xs: "clamp(30px, 2.4vw, 40px)",
-                    sm: "clamp(40px, 3.1vw, 50px)",
-                    lg: "clamp(65px, 5.5vw, 132px)",
+                    lg: "clamp(70px, 5.4vw, 100px)",
+                    md: "clamp(70px, 5.4vw, 100px)",
+                    sm: "40px",
+                    xs: "40px",
                   },
                 }}
               >
@@ -152,17 +168,23 @@ const HeroSection = () => {
             viewport={{ once: true }}
           >
             <Typography
+              variant="body1"
               sx={{
                 display: "flex",
                 flexDirection: "column",
                 mb: 2,
-                fontFamily: "Urbanist",
+
+                fontSize: {
+                  lg: "22px",
+                  md: "28px",
+                  xs: "18px",
+                },
               }}
             >
-              <Box style={parag} component="span" sx={{ lineHeight: 1.0 }}>
+              <Box component="span" sx={{ lineHeight: 1.0 }}>
                 {heroSectionData[0].title}
               </Box>
-              <Box style={parag} component="span" sx={{ lineHeight: 1.0 }}>
+              <Box component="span" sx={{ lineHeight: 1.0 }}>
                 {heroSectionData[0].titletwo}
               </Box>
             </Typography>
@@ -183,7 +205,6 @@ const HeroSection = () => {
                 display: "flex",
                 flexDirection: "row",
                 gap: 3,
-                fontFamily: "Urbanist",
               }}
             >
               <Link
@@ -202,7 +223,7 @@ const HeroSection = () => {
                   alignSelf: "center",
                 }}
               >
-                Build Your Profile
+                <Typography sx={{}}> Build Your Profile</Typography>
               </Link>
               <Link
                 sx={{
@@ -218,17 +239,18 @@ const HeroSection = () => {
                   alignSelf: "center",
                 }}
               >
-                Get a Demo
+                <Typography> Get a Demo</Typography>
               </Link>
             </Stack>
           </motion.div>
         </motion.div>
+        <Stack sx={{ position: "absolute", bottom: "50px", right: "0" }}>
+          <Box component="span">
+            <Image style={banimg} src={homePageImagePaths.bannerImage} />
+          </Box>
+        </Stack>
       </Stack>
-      <Stack sx={{ position: "absolute", bottom: "50px", right: "0" }}>
-        <Box component="span">
-          <Image style={banimg} src={homePageImagePaths.bannerImage} />
-        </Box>
-      </Stack>
+
       <motion.div transition={{ staggerChildren: 1.9 }}>
         <motion.div
           variants={secsecanime}
@@ -244,7 +266,7 @@ const HeroSection = () => {
             delay: 2,
           }}
         >
-          {/* <PythonPathway /> */}
+          <PythonPathway />
         </motion.div>
       </motion.div>
     </Stack>

@@ -1,5 +1,4 @@
 "use client";
-
 import { createTheme } from "@mui/material/styles";
 
 import { Urbanist, Bebas_Neue } from "next/font/google";
@@ -9,13 +8,11 @@ const urbanist = Urbanist({
   subsets: ["latin"],
   fallback: ["Helvetica", "Arial", "sans-serif"],
 });
-
 const bebasNeue = Bebas_Neue({
   weight: ["400"],
   subsets: ["latin"],
   fallback: ["Helvetica", "Arial", "sans-serif"],
 });
-
 const theme = createTheme({
   // You can also customize other palette colors here if needed
   palette: {
@@ -79,7 +76,6 @@ const theme = createTheme({
       fontFamily: urbanist.style.fontFamily,
     },
   },
-
   components: {
     MuiOutlinedInput: {
       styleOverrides: {
@@ -88,7 +84,6 @@ const theme = createTheme({
         },
       },
     },
-
     MuiTypography: {
       defaultProps: {
         variantMapping: {
@@ -106,7 +101,6 @@ const theme = createTheme({
       },
       styleOverrides: {},
     },
-
     MuiButton: {
       defaultProps: {
         disableRipple: true,
@@ -127,5 +121,4 @@ const theme = createTheme({
     xl: 1536,
   },
 });
-
 export default theme;

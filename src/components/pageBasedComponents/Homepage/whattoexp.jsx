@@ -14,14 +14,14 @@ const Whattoexp = ({ contchangeone }) => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", lg: "row" },
+          flexDirection: { xs: "column", md: "row", lg: "row" },
           alignItems: "center",
           mt: "5%",
         }}
       >
         <Box
           sx={{
-            width: { xs: "100%", lg: "50%" },
+            width: { xs: "100%", md: "50%", lg: "50%" },
             borderRight: { xs: "none", lg: "1px solid" },
             pt: "3%",
             pb: "3%",
@@ -29,15 +29,15 @@ const Whattoexp = ({ contchangeone }) => {
             textAlign: "center",
           }}
         >
-          <Typography sx={{ fontFamily: "urbanist", fontSize: "28px" }}>
+          <Typography variant="body1" sx={{ fontSize: "28px" }}>
             What to expect ?
           </Typography>
         </Box>
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", lg: "row" },
-            flexWrap: { xs: "nowrap", lg: "wrap" },
+            flexDirection: { xs: "column", md: "row", lg: "row" },
+            flexWrap: { xs: "nowrap", md: "wrap", lg: "wrap" },
             justifyContent: "end",
           }}
         >
@@ -48,7 +48,7 @@ const Whattoexp = ({ contchangeone }) => {
                 flexDirection: "row",
                 borderRadius: "20px",
                 backgroundColor: "common.white",
-                width: { xs: "100%", lg: "45%" },
+                width: { xs: "100%", md: "45%", lg: "45%" },
                 p: "15px",
                 alignItems: "center",
                 ml: "1%",
@@ -58,8 +58,8 @@ const Whattoexp = ({ contchangeone }) => {
               <Image style={imgsize} src={item.image} />
               <Box>
                 <Typography
+                  variant="body1"
                   sx={{
-                    fontFamily: "urbanist",
                     fontSize: "clamp(22px,1.7vw,28px)",
                     fontWeight: "500",
                     lineHeight: 1.0,
@@ -69,8 +69,8 @@ const Whattoexp = ({ contchangeone }) => {
                   {item.title}
                 </Typography>
                 <Typography
+                  variant="body1"
                   sx={{
-                    fontFamily: "urbanist",
                     fontSize: "clamp(17px,1.2vw,20px)",
                     lineHeight: 1.0,
                   }}

@@ -3,18 +3,12 @@ import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 import Image from "next/image";
-import fivemen from "../../public/images/ready-to.svg";
+import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
 const DemoSection = () => {
-  const fonts = {
-    fontSize: "clamp(40px, 3vw, 100px)",
-  };
   const fontstwo = {
     fontSize: "clamp(20px, 1.5vw, 28px)",
   };
-  const lastimg = {
-    width: "40vw",
-    height: "clamp(430px, 33.1vw, 700px)",
-  };
+
   return (
     <Box
       sx={{
@@ -31,19 +25,20 @@ const DemoSection = () => {
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
         <Typography
-          style={fonts}
+          variant="h1"
           sx={{
-            fontFamily: "Bebas Neue",
             color: "primary.purp",
             lineHeight: "1.0",
+            fontSize: {
+              xs: "25px",
+              md: "clamp(40px, 3vw, 100px)",
+              lg: "clamp(40px, 3vw, 100px)",
+            },
           }}
         >
           READY TO GET STARTED?
         </Typography>
-        <Typography
-          style={fontstwo}
-          sx={{ fontFamily: "urbanist", margin: "20px 0" }}
-        >
+        <Typography variant="body1" style={fontstwo} sx={{ margin: "20px 0" }}>
           Hire at scale with the click of a button.
         </Typography>
         <Box sx={{ display: "flex", gap: 5 }}>
@@ -79,10 +74,11 @@ const DemoSection = () => {
             }}
           >
             <Link
+              variant="body1"
               underline="none"
               sx={{
                 fontSize: "15px",
-                fontFamily: "urbanist",
+
                 color: "primary.main",
               }}
             >
@@ -90,7 +86,10 @@ const DemoSection = () => {
             </Link>
           </Box>
         </Box>
-        <Image style={lastimg} src={fivemen} />
+        <Image
+          style={{ width: "clamp(300px, 23.1vw, 500px)", height: "auto" }}
+          src={homePageImagePaths.fivemen}
+        />
       </Box>
     </Box>
   );

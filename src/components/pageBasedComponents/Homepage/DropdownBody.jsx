@@ -3,15 +3,10 @@ import { Box } from "@mui/system";
 import Image from "next/image";
 import { Typography } from "@mui/material";
 import { Link } from "@mui/material";
-import aspiratvect from "../../../public/images/aspirants-vector.svg";
-import internmain from "../../public/images/placeholder-image.png";
-import internone from "../../public/images/icon-1.svg";
+import homePageImagePaths from "../../../constants/ImagePaths/Homepage/homePageImagePaths";
 import Whattoexp from "./whattoexp";
-import data from "../utilities/intern.js";
-import { Container } from "@mui/material";
 
 const DropdownBody = ({ contchange }) => {
-  console.log(contchange.id);
   const imgs = {
     width: "500px",
     height: "initial",
@@ -42,33 +37,35 @@ const DropdownBody = ({ contchange }) => {
           justifyContent: "space-between",
         }}
       >
-        <Box sx={{ width: { xs: "100%", lg: "50%" } }}>
+        <Box sx={{ width: { xs: "100%", md: "50%", lg: "50%" } }}>
           <Box
             sx={{
               display: { xs: "flex" },
-              flexDirection: { xs: "row-reverse", lg: "column" },
+              flexDirection: { xs: "column", md: "column", lg: "column" },
               width: { xs: "100vw", lg: "900px" },
-              alignItems: { xs: "center", lg: "flex-start" },
+              alignItems: { xs: "center", md: "flex-start", lg: "flex-start" },
             }}
           >
             <Box sx={{ width: { xs: "60vw" } }}>
-              <Image src={aspiratvect} />
+              <Image src={homePageImagePaths.aspiratvect} />
             </Box>
-            <Box sx={{ width: { xs: "40vw" } }}>
+            <Box sx={{ width: { xs: "100vw" } }}>
               <Typography
+                variant="body1"
                 sx={{
                   fontSize: { xs: "25px", lg: "clamp(45px,3.5vw,55px)" },
-                  fontFamily: "urbanist",
+
                   fontWeight: "500",
                 }}
               >
                 {contchange.firstsec.toptitleone}
               </Typography>
               <Typography
+                variant="body1"
                 sx={{
                   fontSize: { xs: "30px", lg: "clamp(65px,5vw,77px)" },
                   lineHeight: "1.0",
-                  fontFamily: "urbanist",
+
                   fontWeight: "600",
                   mb: "3%",
                 }}
@@ -77,9 +74,7 @@ const DropdownBody = ({ contchange }) => {
               </Typography>
             </Box>
           </Box>
-          <Typography
-            sx={{ fontSize: "22px", fontFamily: "urbanist", mb: "5%" }}
-          >
+          <Typography sx={{ fontSize: "22px", mb: "5%" }}>
             {contchange.firstsec.toppara}
           </Typography>
           <Box
@@ -95,11 +90,11 @@ const DropdownBody = ({ contchange }) => {
             }}
           >
             <Link
+              variant="body1"
               underline="none"
               sx={{
                 fontSize: "20px",
                 color: "primary.purp",
-                fontFamily: "urbanist",
               }}
             >
               {contchange.firstsec.button}
@@ -107,8 +102,8 @@ const DropdownBody = ({ contchange }) => {
           </Box>
         </Box>
 
-        <Box sx={{ display: { xs: "none", lg: "block" } }}>
-          <Image style={imgs} src={internmain} />
+        <Box sx={{ display: { xs: "none", md: "block", lg: "block" } }}>
+          <Image style={imgs} src={homePageImagePaths.internmain} />
         </Box>
       </Box>
       {/* second */}
